@@ -3,32 +3,39 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(myMatrix = matrix()) {
 
     # Initialize the inverse cache
 
     myInverse <- NULL
 
-    #
+    # Retrieve the matrix
 
     get <- function() myMatrix
 
-    #
+    # Retrive the matrix's inverse
+
+    get_inverse <- function() myInverse
+
+    # Assign a new value to the matrix
 
     set <- function(newMatrix) {
         myMatrix  <<- newMatrix
         myInverse <<- NULL
     }
 
-    #
+    # Compute a new inverse
 
-    get_inverse <- function() NULL
+    set_inverse <- function(newInverse) myInverse <<- newInverse
 
-    #
+    # Return a list of the constituent functions
 
-    set_inverse <- function() NULL
-
-    #
+    list(
+        get         = get,
+        get_inverse = get_inverse,
+        set         = set,
+        set_inverse = set_inverse
+    )
 
 }
 
