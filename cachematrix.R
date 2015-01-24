@@ -5,6 +5,31 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 
+    # Initialize the inverse cache
+
+    myInverse <- NULL
+
+    #
+
+    get <- function() myMatrix
+
+    #
+
+    set <- function(newMatrix) {
+        myMatrix  <<- newMatrix
+        myInverse <<- NULL
+    }
+
+    #
+
+    get_inverse <- function() NULL
+
+    #
+
+    set_inverse <- function() NULL
+
+    #
+
 }
 
 
