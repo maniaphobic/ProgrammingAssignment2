@@ -1,7 +1,40 @@
-## Put comments here that give an overall description of what your
-## functions do
+#----------------------------------------
+# 
+#
 
-## Write a short comment describing this function
+
+#----------------------------------------
+# Define functions
+#
+
+
+#
+# makeCacheMatrix
+#
+# This function takes a matrix and bundles it in a list containing
+# functions for accessing the matrix and its inverse.
+#
+# Arguments:
+#
+#   - myMatrix (optional): an invertible matrix. This argument
+#   defaults to an empty matrix.
+#
+# Return value: a list comprised of several functions:
+#
+#   - cache_is_dirty: a predicate that determines if the cache needs
+#   to be refreshed
+#
+#   - cache_is_empty: a predicate that determines if the cache is
+#   empty
+#
+#   - get: retrieves the cached matrix
+#
+#   - get_inverse: retrieves the cached matrix inverse
+#
+#   - set: replaces the cached matrix
+#
+#   - set_inverse: replaces the cached matrix inverse
+#
 
 makeCacheMatrix <- function(myMatrix = matrix()) {
 
